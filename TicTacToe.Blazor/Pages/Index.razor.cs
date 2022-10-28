@@ -238,7 +238,6 @@ namespace TicTacToe.Blazor.Pages
         private void ToggleOpen()
         {
             _isPopoverOpen = !_isPopoverOpen;
-            ResetGame();
             InvokeAsync(StateHasChanged);
         }
     }
