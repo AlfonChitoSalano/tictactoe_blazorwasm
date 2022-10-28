@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TicTacToe.Business.Entities;
 
 namespace TicTacToe.Business.Interface
 {
     public interface IGame
     {
-        Player Play(List<Position> playerPositions);
+        Player Play(List<GameBoxPosition> playerPositions);
     }
 }

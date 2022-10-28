@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using TicTacToe.Business.Entities;
 using TicTacToe.Business.Interface;
@@ -18,7 +14,7 @@ namespace TicTacToe.API.Controllers
         }
 
         // POST api/values
-        public Player Post([FromBody] List<Position> positions)
+        public Player Post([FromBody] List<GameBoxPosition> positions)
         {
             return _iGame.Play(positions);
         }
