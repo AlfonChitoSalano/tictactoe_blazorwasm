@@ -30,7 +30,7 @@ namespace TicTacToe.Business
         {
             if (IsDrawGame(playerPositions))
             {
-                var playerResult = PlayM(playerPositions);
+                var playerResult = CheckPlayerPositions(playerPositions);
 
                 if (playerResult != null)
                 {
@@ -44,7 +44,7 @@ namespace TicTacToe.Business
                 };
             }
 
-            var resultPlayer = PlayM(playerPositions);
+            var resultPlayer = CheckPlayerPositions(playerPositions);
 
             if (resultPlayer != null)
             {
@@ -58,7 +58,7 @@ namespace TicTacToe.Business
             };
         }
 
-        private Player PlayM(IReadOnlyList<GameBoxPosition> playerPositions)
+        private Player CheckPlayerPositions(IReadOnlyList<GameBoxPosition> playerPositions)
         {
             for (var i = 0; i < 8; i++)
             {
